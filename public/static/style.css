@@ -1,0 +1,17 @@
+:root {
+    --primary: #069 !important;
+    --primary-hover: rgb(2, 83, 124) !important;
+}
+
+.container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
