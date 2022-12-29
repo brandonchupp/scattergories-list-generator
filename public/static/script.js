@@ -5,7 +5,7 @@ const STATE_DELIMITER = "z";
 let categoriesState = [];
 
 function getWordList(state) {
-    fetch('/static/categories.txt')
+    fetch("/static/categories.txt")
         .then(data => data.text())
         .then(text => processWordList(text, state))
         .catch(error => new Error(error));
@@ -18,7 +18,7 @@ function getRandomInt(max) {
 function processWordList(wordList, state) {
     let categories = wordList.split("\n");
 
-    renderedLists = '';
+    renderedLists = "";
 
     for (let list = 1; list < NUMBER_OF_LISTS + 1; list++) {
         renderedLists += `<details><summary>List ${list}</summary><ol>`;
@@ -56,7 +56,7 @@ function getSharableLink() {
     `;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Parse query parameters
     const params = (new URL(location)).searchParams;
     if (params.get("state")) {
